@@ -11,7 +11,7 @@ const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 120vh;
+  min-height: 140vh;
   padding: 0;
 
   @media (max-width: 480px) and (min-height: 700px) {
@@ -19,19 +19,20 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 20px 4px;
+    margin: 30px 0 60px 4px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
 
     @media (max-width: 480px) {
-      margin: 0 0 20px 2px;
+      margin: 100px 0 20px 2px;
     }
   }
 
   h2 {
-    font-size: 34px;
+    margin: 20px 0 10px 4px;
+    font-size: 56px;
   }
 
   h3 {
@@ -193,18 +194,6 @@ const Hero = () => {
         rel="noreferrer">
         New EP is out
       </a>
-      <StyledPic>
-        <div className="wrapper">
-          <StaticImage
-            className="img"
-            src="../../images/album1.png"
-            width={256}
-            quality={95}
-            formats={['AUTO', 'WEBP', 'AVIF']}
-            alt="Headshot"
-          />
-        </div>
-      </StyledPic>
     </div>
   );
 
