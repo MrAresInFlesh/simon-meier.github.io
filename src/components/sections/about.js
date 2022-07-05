@@ -139,7 +139,25 @@ const About = () => {
     'Unity',
     'SpringBoot',
     'Processing',
+    'Capistrano',
   ];
+
+  const programming_languages = [
+    'C++',
+    'C',
+    'Java',
+    'C#',
+    'Python',
+    'HTML5',
+    'Javascript',
+    'CSS',
+    'PHP',
+    'Latex',
+    'Kotlin',
+    'SQL',
+  ];
+
+  const languages = ['French   - Native', 'English  - C1', 'German   - B2'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -165,7 +183,7 @@ const About = () => {
             <p>
               Fast-forward to today, I had the opportunity to work with a large variety of tools,
               languages and frameworks to realize around{' '}
-              <a href="https://github.com/MrAresInFlesh">30</a> different projects.
+              <a href="https://github.com/MrAresInFlesh">20</a> different projects.
             </p>
 
             <p>
@@ -181,6 +199,22 @@ const About = () => {
 
           <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul>
+
+          <di>
+            <p>Some programming languages I am comfortable with:</p>
+          </di>
+
+          <ul className="skills-list">
+            {programming_languages && programming_languages.map((l, i) => <li key={i}>{l}</li>)}
+          </ul>
+
+          <di>
+            <p>Languages that I speak and write fluently:</p>
+          </di>
+
+          <ul className="skills-list">
+            {languages && languages.map((l, i) => <li key={i}>{l}</li>)}
           </ul>
         </StyledText>
 
