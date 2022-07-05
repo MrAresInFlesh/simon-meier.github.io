@@ -281,7 +281,7 @@ const Jobs = () => {
                     id={`panel-${i}`}
                     role="tabpanel"
                     tabIndex={activeTabId === i ? '0' : '-1'}
-                    aria-labelledby={`tab-${i}`}
+                    aria-labelledby={`tab+${i}`}
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}>
                     <h3>

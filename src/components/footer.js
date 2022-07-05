@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   height: auto;
-  min-height: 70px;
+  min-height: 100px;
   padding: 15px;
   text-align: center;
 `;
@@ -107,6 +107,8 @@ const Footer = () => {
       <StyledCredit tabindex="-1">
         <a href="https://github.com/bchiang7/v4">
           <div>Designed &amp; Built by Brittany Chiang</div>
+          <br></br>
+          <div>Modified &amp; Revised by Simon Meier</div>
 
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">

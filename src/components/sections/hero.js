@@ -3,13 +3,15 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { StaticImage } from 'gatsby-plugin-image';
+
 // import { email } from '@config';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  min-height: 150vh;
   padding: 0;
 
   @media (max-width: 480px) and (min-height: 700px) {
@@ -17,7 +19,7 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 30px 4px;
+    margin: 0 0 20px 4px;
     color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
@@ -29,19 +31,88 @@ const StyledHeroSection = styled.section`
   }
 
   h3 {
-    margin-top: 10px;
+    margin-top: 20px;
     color: var(--slate);
-    line-height: 0.9;
+    line-height: 1.2;
+    font-size: 32px;
   }
 
   p {
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     max-width: 540px;
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+`;
+
+const StyledPic = styled.div`
+  position: relative;
+  max-width: 300px;
+
+  @media (max-width: 768px) {
+    margin: 25px auto 0;
+    width: 70%;
+  }
+
+  .wrapper {
+    ${({ theme }) => theme.mixins.boxShadow};
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--green);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      &:after {
+        top: 15px;
+        left: 15px;
+      }
+
+      .img {
+        filter: none;
+        mix-blend-mode: normal;
+      }
+    }
+
+    .img {
+      position: relative;
+      border-radius: var(--border-radius);
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1);
+      transition: var(--transition);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      background-color: var(--navy);
+      mix-blend-mode: screen;
+    }
+
+    &:after {
+      border: 2px solid var(--green);
+      top: 20px;
+      left: 20px;
+      z-index: -1;
+    }
   }
 `;
 
@@ -58,30 +129,80 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const one = <h1>Hi there, my name is</h1>;
+  const two = <h2 className="big-heading">Simon Meier</h2>;
+  const three = (
+    <h3 className="big-heading">
+      I build all kind of apps and lazily make video games with epic metal soundtracks featuring my
+      beloved{' '}
+      <u>
+        <em>Legator Ghost</em>
+      </u>
+      .
+      <div className="inner">
+        <StyledPic>
+          <div className="wrapper">
+            <StaticImage
+              className="img"
+              src="../../images/legator_ghost.png"
+              width={256}
+              quality={95}
+              formats={['AUTO', 'WEBP', 'AVIF']}
+              alt="Headshot"
+            />
+          </div>
+        </StyledPic>
+      </div>
+      <br></br>
+    </h3>
+  );
+
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
+        <br></br>
+        My objective is to develop functional and robust applications in both academic and
+        industrial fields.
+      </p>
+      <p>
+        In <strong>2022</strong>, I obtained a{' '}
+        <a
+          href="https://www.he-arc.ch/ingenierie/bachelor/informatique-et-systemes-de-communication/"
+          target="_blank"
+          rel="noreferrer">
+          Bsc. in Computer Science
         </a>
-        .
+        , spiecialized in software engineering following the courses from the{' '}
+        <a href="https://he-arc.com/" target="_blank" rel="noreferrer">
+          He-Arc
+        </a>{' '}
+        in <strong>Switzerland</strong>.
       </p>
     </>
   );
+
   const five = (
-    <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
-      target="_blank"
-      rel="noreferrer">
-      Check out my course!
-    </a>
+    <div className="inner">
+      <a
+        className="email-link"
+        href="https://soundcloud.com/simon_meier/sets/the-shadows-hunger-ep"
+        target="_blank"
+        rel="noreferrer">
+        New EP is out
+      </a>
+      <StyledPic>
+        <div className="wrapper">
+          <StaticImage
+            className="img"
+            src="../../images/album1.png"
+            width={256}
+            quality={95}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt="Headshot"
+          />
+        </div>
+      </StyledPic>
+    </div>
   );
 
   const items = [one, two, three, four, five];
