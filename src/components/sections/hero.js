@@ -11,7 +11,7 @@ const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 150vh;
+  min-height: 120vh;
   padding: 0;
 
   @media (max-width: 480px) and (min-height: 700px) {
@@ -30,11 +30,15 @@ const StyledHeroSection = styled.section`
     }
   }
 
+  h2 {
+    font-size: 34px;
+  }
+
   h3 {
     margin-top: 20px;
     color: var(--slate);
     line-height: 1.2;
-    font-size: 32px;
+    font-size: 24px;
   }
 
   p {
@@ -160,7 +164,6 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        <br></br>
         My objective is to develop functional and robust applications in both academic and
         industrial fields.
       </p>
