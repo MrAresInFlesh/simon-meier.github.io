@@ -24,7 +24,7 @@ const StyledText = styled.div`
     grid-template-columns: repeat(2, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 20px 10px 20px 20px;
     overflow: hidden;
     list-style: none;
 
@@ -195,27 +195,27 @@ const About = () => {
             </p>
 
             <p>Here are a few technologies I am using frequently:</p>
+
+            <ul className="skills-list">
+              {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+
+            <di>
+              <p>Some programming languages I am comfortable with:</p>
+            </di>
+
+            <ul className="skills-list">
+              {programming_languages && programming_languages.map((l, i) => <li key={i}>{l}</li>)}
+            </ul>
+
+            <di>
+              <p>Languages that I speak and write fluently:</p>
+            </di>
+
+            <ul className="skills-list">
+              {languages && languages.map((l, i) => <li key={i}>{l}</li>)}
+            </ul>
           </div>
-
-          <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
-
-          <di>
-            <p>Some programming languages I am comfortable with:</p>
-          </di>
-
-          <ul className="skills-list">
-            {programming_languages && programming_languages.map((l, i) => <li key={i}>{l}</li>)}
-          </ul>
-
-          <di>
-            <p>Languages that I speak and write fluently:</p>
-          </di>
-
-          <ul className="skills-list">
-            {languages && languages.map((l, i) => <li key={i}>{l}</li>)}
-          </ul>
         </StyledText>
 
         <StyledPic>
