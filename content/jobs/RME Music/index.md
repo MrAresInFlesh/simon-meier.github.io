@@ -1,11 +1,12 @@
 ---
 date: '2021-07-21'
-title: 'Crew'
-company: 'McDonald - Eric Rohner'
-location: 'Delémont, Jura'
-range: 'July 2018 - May 2022'
+title: 'Full stack Web developer'
+company: 'RME Music'
+location: 'Bassecourt, Jura'
+range: 'July 2021 - December 2021'
+url: 'https://github.com/MrAresInFlesh?tab=repositories'
 ---
 
-Worked alongside studies during weekends, almost every weekend of the year.
-
-Mainly in customer service, as I speak 3 languages ​​fluently.
+- Web app for visualizing and playing music score.
+- Creating portfolio for the client.
+- Submission and oriented test for the functionnalities.
