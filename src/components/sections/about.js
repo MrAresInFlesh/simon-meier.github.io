@@ -140,6 +140,8 @@ const About = () => {
     'SpringBoot',
     'Processing',
     'Capistrano',
+    'Snowflake',
+    'UiPath',
   ];
 
   const programming_languages = [
@@ -155,6 +157,7 @@ const About = () => {
     'Latex',
     'Kotlin',
     'SQL',
+    'VB Net',
   ];
 
   const languages = ['French   - Native', 'English  - C1', 'German   - B2'];
