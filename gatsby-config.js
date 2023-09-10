@@ -4,10 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Simon Meier',
     description:
-      'Simon Meier is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+      'Simon Meier is a software engineer who specializes in building (and occasionally designing) softwares.',
     siteUrl: 'https://simonmeier.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+    twitterUsername: '',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
