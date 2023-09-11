@@ -3,8 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-import { StaticImage } from 'gatsby-plugin-image';
-
+// import { StaticImage } from 'gatsby-plugin-image';
 // import { email } from '@config';
 
 const StyledHeroSection = styled.section`
@@ -26,7 +25,7 @@ const StyledHeroSection = styled.section`
     font-weight: 400;
 
     @media (max-width: 480px) {
-      margin: 100px 0 20px 2px;
+      margin: 50px 0 20px 2px;
     }
   }
 
@@ -54,72 +53,72 @@ const StyledHeroSection = styled.section`
   }
 `;
 
-const StyledPic = styled.div`
-  position: relative;
-  max-width: 300px;
-
-  @media (max-width: 768px) {
-    margin: 25px auto 0;
-    width: 70%;
-  }
-
-  .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
-    position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
-
-    &:hover,
-    &:focus {
-      outline: 0;
-
-      &:after {
-        top: 15px;
-        left: 15px;
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
-    }
-
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
-    }
-
-    &:after {
-      border: 2px solid var(--green);
-      top: 20px;
-      left: 20px;
-      z-index: -1;
-    }
-  }
-`;
+//const StyledPic = styled.div`
+//   position: relative;
+//   max-width: 300px;
+//
+//   @media (max-width: 768px) {
+//     margin: 25px auto 0;
+//     width: 70%;
+//   }
+//
+//   .wrapper {
+//     ${({ theme }) => theme.mixins.boxShadow};
+//     display: block;
+//     position: relative;
+//     width: 100%;
+//     border-radius: var(--border-radius);
+//     background-color: var(--green);
+//
+//     &:hover,
+//     &:focus {
+//       outline: 0;
+//
+//       &:after {
+//         top: 15px;
+//         left: 15px;
+//       }
+//
+//       .img {
+//         filter: none;
+//         mix-blend-mode: normal;
+//       }
+//     }
+//
+//     .img {
+//       position: relative;
+//       border-radius: var(--border-radius);
+//       mix-blend-mode: multiply;
+//       filter: grayscale(100%) contrast(1);
+//       transition: var(--transition);
+//     }
+//
+//     &:before,
+//     &:after {
+//       content: '';
+//       display: block;
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: var(--border-radius);
+//       transition: var(--transition);
+//     }
+//
+//     &:before {
+//       top: 0;
+//       left: 0;
+//       background-color: var(--navy);
+//       mix-blend-mode: screen;
+//     }
+//
+//     &:after {
+//       border: 2px solid var(--green);
+//       top: 20px;
+//       left: 20px;
+//       z-index: -1;
+//     }
+//   }
+// `;
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -134,39 +133,35 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi there, my name is</h1>;
+  const one = <h1>Hi stalker, my name is</h1>;
   const two = <h2 className="big-heading">Simon Meier</h2>;
   const three = (
     <h3 className="big-heading">
-      I build all kind of apps and lazily make video games with epic metal soundtracks featuring my
-      beloved{' '}
-      <u>
-        <em>Legator Ghost</em>
-      </u>
-      .
-      <div className="inner">
-        <StyledPic>
-          <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/legator_ghost.png"
-              width={256}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
-          </div>
-        </StyledPic>
-      </div>
+      I build all kind of apps and lazily make video games with sometimes epic metal soundtracks.
       <br></br>
     </h3>
   );
 
+  //<div className="inner">
+  //   <StyledPic>
+  //     <div className="wrapper">
+  //       <StaticImage
+  //         className="img"
+  //         src="../../images/legator_ghost.png"
+  //         width={256}
+  //         quality={95}
+  //         formats={['AUTO', 'WEBP', 'AVIF']}
+  //         alt="Headshot"
+  //       />
+  //     </div>
+  //   </StyledPic>
+  // </div>
+
   const four = (
     <>
       <p>
-        My objective is to develop functional and robust applications in both academic and
-        industrial fields.
+        My objective is to develop functional and robust applications, and always learning something
+        new. Nowadays that's kind of a basic; I enjoy it nonetheless (most of the time).
       </p>
       <p>
         In <strong>2022</strong>, I obtained a{' '}
@@ -192,7 +187,7 @@ const Hero = () => {
         href="https://soundcloud.com/simon_meier/sets/the-shadows-hunger-ep"
         target="_blank"
         rel="noreferrer">
-        New EP is out
+        Come visit me on Soundcloud
       </a>
     </div>
   );
