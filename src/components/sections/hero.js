@@ -133,11 +133,12 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi stalker, my name is</h1>;
-  const two = <h2 className="big-heading">Simon Meier</h2>;
+  const one = <h1>Hi stalker. Name is</h1>;
+  const two = <h2 className="big-heading">Simon</h2>;
   const three = (
     <h3 className="big-heading">
-      I build all kind of apps and lazily make video games with sometimes epic metal soundtracks.
+      Yeah, boring name, whatever. I build all kind of apps. Mostyl Android and Unity nowadays. I
+      mispelled mostly. Thought I would be correcting it? Nope.
       <br></br>
     </h3>
   );
@@ -160,8 +161,12 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        My objective is to develop functional and robust applications, and always learning something
-        new. Nowadays that's kind of a basic; I enjoy it nonetheless (most of the time).
+        I develop softwares. That's my job. But that's not me. I write music and stories. I do 2d
+        and 3d blender animations too. Search for Fire Anatomy if you are interested. I enjoy going
+        all out in game jams with my friends. Objective in life is to be the happiest possible. I
+        like to work; even better, I love to work on things that make sense. I hate the opposite,
+        but I like money too. Feel like I am expressing myself like a five years old kid? That's for
+        you.
       </p>
       <p>
         In <strong>2022</strong>, I obtained a{' '}
@@ -184,10 +189,17 @@ const Hero = () => {
     <div className="inner">
       <a
         className="email-link"
-        href="https://soundcloud.com/simon_meier/sets/the-shadows-hunger-ep"
+        href="https://www.youtube.com/watch?v=VQSOvWUJjYU&list=RDVQSOvWUJjYU&start_radio=1"
         target="_blank"
         rel="noreferrer">
-        Come visit me on Soundcloud
+        Pay me a visit.
+      </a>
+      <a
+        className="email-link"
+        href="https://itch.io/profile/pastekacher"
+        target="_blank"
+        rel="noreferrer">
+        Or if you want to check out games I was part of.
       </a>
     </div>
   );

@@ -3,10 +3,10 @@ date: '2022-10-24'
 title: 'Software Engineer - RPA, Web, C# Developer & Data Analyst'
 company: 'Digital Solutions'
 location: 'Porrentruy, Jura'
-range: 'October 2022 - today'
+range: 'October 2022 - 31 March 2024'
 ---
 
-I work for **Digital Solutions** mainly in the field of RPA, data analysis and sometimes in Web apps.
+I worked for **Digital Solutions** mainly in the field of RPA, data analysis and Web apps.
 
 ## Formations
 

@@ -186,11 +186,11 @@ const About = () => {
             <p>
               Fast-forward to today, I had the opportunity to work with a large variety of tools,
               languages and frameworks to realize around{' '}
-              <a href="https://github.com/MrAresInFlesh">20</a> different projects.
+              <a href="https://github.com/MrAresInFlesh">45</a> different projects.
             </p>
 
             <p>
-              Recently, my bachelor thesis was an Android project about thermal imaging using{' '}
+              Bachelor thesis was an Android project about thermal imaging using{' '}
               <a href="https://www.flir.com/products/flir-one-pro/">
                 FLIR One Pro camera and its SDK
               </a>{' '}
@@ -220,19 +220,6 @@ const About = () => {
             </ul>
           </div>
         </StyledText>
-
-        <StyledPic>
-          <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/me.jpg"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
-          </div>
-        </StyledPic>
       </div>
     </StyledAboutSection>
   );
