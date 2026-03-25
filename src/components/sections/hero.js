@@ -133,6 +133,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  const zero = <h1>What's this.</h1>;
   const one = <h1>Hi stalker. Name is</h1>;
   const two = <h2 className="big-heading">Simon</h2>;
   const three = (
@@ -211,7 +212,7 @@ const Hero = () => {
     </div>
   );
 
-  const items = [one, two, three, four, five, six];
+  const items = [zero, one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>
