@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const prismColors = {
-  bg: `#112340`,
+  bg: `#BDC9DC`,
   lineHighlight: `#1d2d50`,
   blue: `#5ccfe6`,
   purple: `#c3a6ff`,
@@ -9,8 +9,8 @@ const prismColors = {
   yellow: `#ffd580`,
   orange: `#ffae57`,
   red: `#ef6b73`,
-  grey: `#a2aabc`,
-  comment: `#8695b799`,
+  grey: `#48526B`,
+  comment: `#323A4EC2`,
 };
 
 // https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
