@@ -162,12 +162,14 @@ const Hero = () => {
     <>
       <p>
         I develop softwares. That's my job. But that's not me. I write music and stories. I do 2d
-        and 3d blender animations too. Search for Fire Anatomy if you are interested. I enjoy going
-        all out in game jams with my friends. Objective in life is to be the happiest possible. I
-        like to work; even better, I love to work on things that make sense. I hate the opposite,
-        but I like money too. Feel like I am expressing myself like a five years old kid? That's for
-        you.
+        and 3d blender animations too. Search for Fire Anatomy if you are interested.
       </p>
+      <p>
+        I enjoy going all out in game jams with my friends. Objective in life is to be the happiest
+        possible. I like to work; even better, I love to work on things that make sense. I hate the
+        opposite, but I like money too.
+      </p>
+      <p>Feel like I am expressing myself like a five years old kid? That's for you.</p>
       <p>
         In <strong>2022</strong>, I obtained a{' '}
         <a
@@ -194,17 +196,22 @@ const Hero = () => {
         rel="noreferrer">
         Pay me a visit.
       </a>
+    </div>
+  );
+
+  const six = (
+    <div className="inner">
       <a
         className="email-link"
         href="https://itch.io/profile/pastekacher"
         target="_blank"
         rel="noreferrer">
-        Or if you want to check out games I was part of.
+        Or if you want to check out games I was part of. {'<-'}
       </a>
     </div>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>
